@@ -1,0 +1,45 @@
+{
+  "profile_name": "Hardened profile",
+  "ike_version": "IKEv2",
+  "tunnel_mode": "tunnel",
+  "esp_count": 22,
+  "ah_count": 0,
+  "nat_t": true,
+  "nat_t_port": 4500,
+  "sa_count": 3,
+  "spi_values": ["0x10A2F80E", "0x20D1B9CF", "0x81F522EA"],
+  "crypto": {
+    "encryption": "AES-256-GCM",
+    "integrity": "AES-GCM AEAD",
+    "dh_group": "14",
+    "pfs": "enabled",
+    "rekey_lifetime_seconds": 28800,
+    "ike_proposal": "AES-GCM-256 / ECP384 / PFS"
+  },
+  "observations": [
+    "IKEv2 negotiation observed",
+    "Modern AEAD suite in use",
+    "PFS enabled for child SA",
+    "NAT traversal on UDP 4500 remains compatible"
+  ],
+  "flow": {
+    "packet_count": 2380,
+    "total_bytes": 510000,
+    "mean_packet_length": 214,
+    "std_packet_length": 83,
+    "max_packet_length": 1400,
+    "min_packet_length": 60,
+    "flow_duration_seconds": 120.4,
+    "packets_per_second": 19.8,
+    "bytes_per_second": 4237,
+    "mean_inter_arrival_time": 0.050,
+    "inter_arrival_variance": 0.004,
+    "upload_download_ratio": 0.91,
+    "upload_download_bytes_ratio": 0.85,
+    "burst_count": 8,
+    "protocol_context": "UDP/4500",
+    "directional_symmetry": 0.91,
+    "timeline": [0, 1.8, 3.7, 7.0, 10.4, 16.0, 22.9, 27.5, 32.8, 36.9, 41.1, 47.7, 58.1, 69.4, 90.5, 112.8],
+    "packet_sizes": [70, 88, 110, 120, 160, 200, 240, 270, 300, 360, 410, 520, 610, 760, 920, 1230]
+  }
+}

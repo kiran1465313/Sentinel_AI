@@ -1,0 +1,45 @@
+{
+  "profile_name": "Legacy-risk profile",
+  "ike_version": "IKEv1",
+  "tunnel_mode": "tunnel",
+  "esp_count": 18,
+  "ah_count": 1,
+  "nat_t": true,
+  "nat_t_port": 4500,
+  "sa_count": 4,
+  "spi_values": ["0x7F34B100", "0x9E44AA84", "0x7D98A1F5", "0xA1C34B00"],
+  "crypto": {
+    "encryption": "AES-CBC",
+    "integrity": "SHA-1",
+    "dh_group": "2",
+    "pfs": "disabled",
+    "rekey_lifetime_seconds": 86400,
+    "ike_proposal": "AES-CBC/SHA1/DH2"
+  },
+  "observations": [
+    "Old IKE negotiation observed",
+    "Legacy integrity algorithm uses SHA-1",
+    "No PFS evidence on child SA",
+    "NAT traversal present on UDP 4500"
+  ],
+  "flow": {
+    "packet_count": 1850,
+    "total_bytes": 421000,
+    "mean_packet_length": 227,
+    "std_packet_length": 116,
+    "max_packet_length": 1400,
+    "min_packet_length": 52,
+    "flow_duration_seconds": 98.7,
+    "packets_per_second": 18.7,
+    "bytes_per_second": 4269,
+    "mean_inter_arrival_time": 0.053,
+    "inter_arrival_variance": 0.009,
+    "upload_download_ratio": 0.62,
+    "upload_download_bytes_ratio": 0.58,
+    "burst_count": 17,
+    "protocol_context": "UDP/4500",
+    "directional_symmetry": 0.81,
+    "timeline": [0, 2.1, 4.3, 7.9, 13.5, 18.2, 21.5, 27.8, 31.4, 34.0, 39.6, 46.8, 53.1, 62.4, 76.8, 88.3],
+    "packet_sizes": [80, 94, 120, 140, 150, 180, 220, 260, 310, 420, 520, 640, 780, 890, 980, 1200, 1400]
+  }
+}
